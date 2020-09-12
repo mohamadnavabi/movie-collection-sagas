@@ -45,5 +45,5 @@ export const receiveMovieWithCategory = (movies: any) => ({
 * clear Movie Categories start
 */
 export const clearCategoryMovies = () => ({
-    type: types.CLEAR_CATEGORY_MOVIES,
+    type: types.CLEAR_SEARCH_MOVIE,
 });
