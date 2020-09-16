@@ -1,7 +1,7 @@
 import { call, put, takeLatest } from 'redux-saga/effects';
 import * as types from './movie.types';
 import { getMovies, getMovieWithCategory, searchMovie } from '../../api/methods/movies';
-import { receiveMovies, receiveMovieWithCategory, clearCategoryMovies, receiveSearchMovies } from './movie.action';
+import { receiveMovies, receiveMovieWithCategory, clearCategoryMovies, clearSearchMovies, receiveSearchMovies } from './movie.action';
 
 /*
 * Fetch all movies start
@@ -49,7 +49,7 @@ function* fetchSearchedMovies(action) {
             const response = yield call(searchMovie, payload);
             yield put(receiveSearchMovies(response));
         } else {
-            yield put(clearCategoryMovies());
+            yield put(clearSearchMovies());
         }
     } catch (error) {
         yield put(receiveSearchMovies(error));
