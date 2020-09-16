@@ -26,6 +26,10 @@ export const receiveSearchMovies = (movies: any) => ({
     payload: movies
 });
 
+export const clearSearchMovies = () => ({
+    type: types.CLEAR_SEARCH_MOVIE,
+});
+
 
 /* 
 * Fetch Movie Categories start
@@ -45,5 +49,5 @@ export const receiveMovieWithCategory = (movies: any) => ({
 * clear Movie Categories start
 */
 export const clearCategoryMovies = () => ({
-    type: types.CLEAR_SEARCH_MOVIE,
+    type: types.CLEAR_CATEGORY_MOVIES,
 });
