@@ -30,7 +30,6 @@ const userReducer = (state = INITIAL_STATE, action) => {
         searchedMovie: action.payload
       }
     case types.CLEAR_SEARCH_MOVIE:
-      console.log('CLEAR_SEARCH_MOVIE')
       return {
         ...state,
         searchedMovie: []
